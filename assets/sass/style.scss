@@ -1,0 +1,99 @@
+$primary-color: #e62b4a;
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flexbox(
+  $align: flex-start,
+  $justify: flex-start,
+  $flex-direction: row,
+  $wrap: nowrap
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+  flex-wrap: $wrap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // font-family: "Roboto-Black", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  //   font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  /* background-color: $body-color; */
+  position: relative;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.clear {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Bỏ đấu chấm của thẻ li*/
+li {
+  list-style-type: none;
+}
+
+.header {
+  & .navbar-brand {
+    & i {
+      font-size: 3.5rem;
+    }
+
+    & span {
+      font-size: 3rem;
+    }
+  }
+
+  & .nav-link {
+    transition: all 0.2s linear;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 2px;
+      background-color: #35a22c;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: width 0.25s linear;
+    }
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  & .nav-link:hover {
+    color: #35a22c !important;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  // Cái active set cứng màu xanh với gạch dưới
+  & .active {
+    color: #35a22c;
+    &::after {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+
+/////
+1 .
+Lí do phải đặt cái js ở cuối là để tăng tính an toàn cho trang web phòng trường hợp trang web chúng ta bị trục trặc -> chúng ta ưu tiên giao diện lên trước sau đó là xử lý UX
+
+2 .
+
+// Header
+
+Bắt đầu làm Giao diện
+Class : ml-auto căn đều bên tay trái rồi đẩy qua hết bên phải
+Hoặc nếu không muốn thì chúng ta sẽ viết CSS đè lên class của bootstrap
+
+Ngoài những class của bootstrap ra thì còn lại chúng ta phải viết CSS
+
+********** Những thứ bootstrap cung cấp sẵn
+
+    Bố cục: container
+    text: 
+        secondary: xám;
+        primary:xanh dương
+        success: xanh lá
+        danger: màu đỏ;
+        warning: màu vàng
+        info: xanh nhạt
+    color: 
+        text-màu
+
+    background-color: 
+        bg-màu
+
+    margin: m-0->5,auto,ml,mr,mb,mt, mx(2 bên), my(trên dưới)
+
+    padding: p-0->5,atuo,pl,pr,pb,pt
+
+    button: btn, btn-mau
+
+    display: d-block, d-inline, d-inline-block, d-flex; justify-content-space-between, align-items-center
+
+    border: border, border-top, border-màu,
+        bo góc: rounded, rounded-circle
+
+    width: w-25, w-50, w-75, w-100
+
+    flex: justify-content, justify-
+    
+    oveflow: hidden;
+
+    position: absolute/relative/fixed
+
+    boxshadow: shadow, shadow-sm, shadow-lg
+
+Class của bootstrap là nó dùng thuộc tính là important
+
+// Slider
+
+- Mỗi cái carousel đều có một id và mỗi carousel trên trang web phải có id khác nhau

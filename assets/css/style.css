@@ -1,0 +1,68 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: normal;
+  /* background-color: $body-color; */
+  position: relative;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.clear {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Bỏ đấu chấm của thẻ li*/
+li {
+  list-style-type: none;
+}
+
+.header .navbar-brand i {
+  font-size: 3.5rem;
+}
+.header .navbar-brand span {
+  font-size: 3rem;
+}
+.header .nav-link {
+  transition: all 0.2s linear;
+  position: relative;
+}
+.header .nav-link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #35a22c;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: width 0.25s linear;
+}
+.header .nav-link:not(:last-child) {
+  margin-right: 2rem;
+}
+.header .nav-link:hover {
+  color: #35a22c !important;
+}
+.header .nav-link:hover::after {
+  width: 100%;
+}
+.header .active {
+  color: #35a22c;
+}
+.header .active::after {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
