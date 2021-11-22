@@ -1,4 +1,5 @@
 $primary-color: #e62b4a;
+$secondary: #fd9c84;
 
 @mixin size($width, $height: $width) {
   width: $width;
@@ -281,10 +282,10 @@ li {
     }
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1200px) {
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
 }
 
 @media screen and (max-width: 768px) {
