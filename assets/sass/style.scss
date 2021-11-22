@@ -51,13 +51,27 @@ li {
 }
 
 .header {
+  position: absolute; // header nó rút ra khỏi giao diện luôn và carousel rút lên
+  top: 0;
+  left: 0;
+  z-index: 10; // cho nó chồi lên
+  width: 100%;
+
   & .navbar-brand {
     & i {
-      font-size: 3.5rem;
+      font-size: 4rem;
     }
 
     & span {
       font-size: 3rem;
+    }
+  }
+
+  & .navbar-toggler {
+    & .navbar-toggler-icon {
+      display: inline-block;
+      position: absolute;
+      z-index: 10;
     }
   }
 
@@ -97,3 +111,194 @@ li {
     }
   }
 }
+
+.slider {
+  & .carousel-item {
+    height: 70rem;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::after {
+      content: "";
+      @include size(100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  & .carousel-item-1 {
+    background-image: url(../img/finland.jpg);
+  }
+  & .carousel-item-2 {
+    background-image: url(../img/mountains-1.jpg);
+  }
+  & .carousel-item-3 {
+    background-image: url(../img/mountains.jpg);
+  }
+
+  & .carousel-caption {
+    @include flexbox(center, center, column);
+    bottom: 50%;
+    transform: translateY(50%);
+
+    & img {
+      width: 14rem;
+      height: 14rem;
+      border-radius: 50%;
+    }
+
+    & h1 {
+      margin: 0;
+    }
+  }
+
+  & .carousel-indicators {
+    margin-bottom: 10rem;
+    & li {
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+    }
+  }
+}
+
+.hiring {
+  padding: 7rem 0;
+  background: url(../img/3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  // Cái after này nó đang đè lên container
+  &::after {
+    content: "";
+    @include size(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  & .container {
+    position: relative;
+    z-index: 10;
+  }
+
+  & header {
+    margin-bottom: 4rem;
+  }
+
+  & .item {
+    padding: 3rem 1rem 3rem;
+    border-radius: 1rem;
+    height: 30rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    // Làm nhòe cái background thì chúng ta sử dụng backdrop-filter;
+    backdrop-filter: blur(3px);
+    transition: all 0.23s linear;
+
+    & i {
+      font-size: 4.5rem;
+      color: #35a22c;
+      margin-bottom: 2rem;
+    }
+
+    & h3 {
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      border-color: white;
+    }
+  }
+}
+
+.portfolio {
+  & header {
+    margin-top: 9rem;
+
+    & h1 {
+      font-weight: bold;
+    }
+  }
+
+  & .nav-link {
+    color: #6a6c76;
+    border: 1px solid #6a6c76;
+
+    &:not(:first-child) {
+      margin-left: 1rem;
+    }
+  }
+
+  & .nav-pills {
+    margin: 4.2rem 0 3.3rem;
+    @include flexbox(center, center);
+  }
+
+  & .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    background-color: #35a22c;
+    border-color: #35a22c;
+  }
+
+  & .item {
+    overflow: hidden;
+    margin-bottom: 3rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 2rem;
+    text-align: center;
+
+    & h1 {
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+
+    & p {
+      margin-bottom: 4.4rem;
+      font-size: 1.5rem;
+      font-weight: 350;
+    }
+    & img {
+      width: 100%;
+    }
+
+    &:hover {
+      & h1 {
+        color: #35a22c;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 768px) {
+  .hiring {
+    & .item {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hiring {
+    & .item {
+      margin-bottom: 3rem;
+    }
+  }
+} ;

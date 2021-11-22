@@ -55,3 +55,58 @@ Class của bootstrap là nó dùng thuộc tính là important
 // Slider
 
 - Mỗi cái carousel đều có một id và mỗi carousel trên trang web phải có id khác nhau
+
+-- Công việc tiếp theo là đưa cái caption 
+- Có thể dùng before và after để tạo cái lớp mờ
+
+
+- Ở mỗi carousel item sẽ có một caption đi theo chung
+    - Khi chỉnh có thể tận dụng class của bootstrap
+
+- Để muốn chỉnh coi bootstrap nó dùng thế nào để có thể chỉnh được kích thước 
+
+- Cách để custome lại bootstrap thì chúng ta cứ inspect nó lên coi và viết CSS đè lên lại 
+
+- Bootstrap nó có built ra bộ grid dùng flexbox để  built ra nên chúng ta có thể sử dụng
+
+*******************************************
+
+ /// Hiring section
+
+- Bootstrap cho mình bộ thư viện grid có 12 cột
+
+    - Mỗi item sẽ là một col và row(list) là cha chứa 
+
+    - 3 Item nằm trên một hàng nên mỗi hàng sẽ là 12 cột
+    <i class="fa fa-paint-brush"></i>
+    <i class="fa fa-shekel-sign"></i>
+    <i class="fa fa-camera"></i>
+
+    - Nếu một hàng không đủ chỗ chứa các cột thì nó sẽ rớt xuống dưới
+
+    - Bootstrap chỉ chia được số item chẵn không thể chia được số item lẻ.
+
+- 
+
+*******************************************
+
+ /// Skill section 
+
+    - Để làm thằng này chúng ta có thể sử dụng bootstrap để làm luôn
+
+    - href của thẻ a sẽ trỏ tới thuộc tính của nav-pane
+
+    - Còn cái  Id của thẻ a ko cần thiết
+
+    - col-sm-6 , col-md-4, col-lg-2
+
+        - Trong trường hợp ko xét cho thằng lg thì nó lấy thằng gần nhất
+
+*******************************************
+
+ /// Skill section 
+
+
+    - Có thể dùng boostrap để reponsive cho giao diện của chúng ta
+
+    - Khi Reponsive cho carousel ngta sẽ không dùng image
